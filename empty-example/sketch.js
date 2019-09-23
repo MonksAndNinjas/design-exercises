@@ -2,20 +2,21 @@
 console.log(
   "Now rendering - " +
   //"followMouse() => draws circles that follow mouse movement"
-  "interactiveColorBoxes() => boxes with colors in it"
+  //"interactiveColorBoxes() => boxes with colors in it"
+  "colorSpectrum() => displays color range in a rectangle"
 );
+
+var stepX;
+var stepY;
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  createCanvas(720, 720);
-  noCursor();
-
-  colorMode(HSB, 360, 100, 100);
-  rectMode(CENTER);
+  createCanvas(800, 400);
   noStroke();
+  colorMode(HSB, width, height, 100);
 }
 
 // repeats draw function
 function draw() {
-  interactiveColorBoxes();
+  colorSpectrum();
 }
