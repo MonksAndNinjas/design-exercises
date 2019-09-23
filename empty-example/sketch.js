@@ -31,7 +31,13 @@ function draw() {
   colorPalletes();
 }
 
+function mouseReleased() {
+  shakeColors();
+}
 
 function keyPressed() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image12
+  if (key == 'c' || key == 'C') writeFile([gd.ase.encode(colros)], gd.timestampe(), 'ase');
+  if (key == '1') interpolateShortest = true;
+  if (key == '2') interpolateShortest = false;
 }
