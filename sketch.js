@@ -8,6 +8,7 @@ console.log(
   //"colorPalletes() => create color groups in every gradiation"
   //"imagePalletes() -> create color groups from a given image"
   //"ruleColorPalletes() => create color groups with specific color nuances"
+  "shapes() => create exotic shapes"
 );
 
 //global variables
@@ -17,11 +18,12 @@ function preload() {
 
 // variables to add to the canvas before drawing begins
 function setup() {
+  colorPolygonsSetup();
 }
 
 // repeats draw function
 function draw() {
-
+  colorPolygons();
 }
 
 function mouseReleased() {
@@ -29,8 +31,10 @@ function mouseReleased() {
 
 function keyPressed() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
-  if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
+//  if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
+  if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
 }
 
 function keyReleased() {
+  colorPolygonsKeyReleased();
 }
