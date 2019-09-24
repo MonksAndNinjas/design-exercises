@@ -7,6 +7,7 @@ console.log(
   //"circleColorSpectrum() => displays color range in a circle"
   //"colorPalletes() => create color groups in every gradiation"
   //"imagePalletes() -> create color groups from a given image"
+  //"ruleColorPalletes() => create color groups with specific color nuances"
 );
 
 //global variables
@@ -20,15 +21,15 @@ function setup() {
 
 // repeats draw function
 function draw() {
+
 }
 
 function mouseReleased() {
-
 }
 
 function keyPressed() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
-  //if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
+  if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
 }
 
 function keyReleased() {
