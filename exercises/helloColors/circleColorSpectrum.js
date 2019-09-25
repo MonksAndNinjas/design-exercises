@@ -2,11 +2,12 @@
 global variables:
   var segmentCount = 360;
   var radius = 300;
+*/
 
-setup() parameters:
+function circleColorSpectrumSetup() {
   createCanvas(800, 800);
   noStroke();
-*/
+}
 
 function circleColorSpectrum() {
   colorMode(HSB, 360, width, height);
@@ -30,27 +31,26 @@ function circleColorSpectrum() {
   endShape();
 }
 
-/*
-Add to keyPressed() changes size of circle and it's color values
-
-switch (key) {
-  case '1':
-    segmentCount = 360;
-    break;
-  case '2':
-    segmentCount = 45;
-    break;
-  case '3':
-    segmentCount = 24;
-    break;
-  case '4':
-    segmentCount = 12;
-    break;
-  case '5':
-    segmentCount = 6;
-    break;
+function circleColorSpectrumKeyPressed() {
+  switch (key) {
+    case '1':
+      segmentCount = 360;
+      break;
+    case '2':
+      segmentCount = 45;
+      break;
+    case '3':
+      segmentCount = 24;
+      break;
+    case '4':
+      segmentCount = 12;
+      break;
+    case '5':
+      segmentCount = 6;
+      break;
 }
 
+/*
 Mouse: Position x: Saturation
       Position y: Brightness
 

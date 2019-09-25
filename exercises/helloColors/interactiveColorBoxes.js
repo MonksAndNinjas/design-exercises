@@ -1,14 +1,13 @@
-/*
-setup() parameters:
+
+function interactiveColorBoxesSetup() {
   createCanvas(720, 720);
   noCursor();
 
-  colorMode(HSB, 360, 100, 100);
-  colorMode() allows users to change the way color value is interpreted
-  HSB specifies the color model, and the three values specify their range
+  colorMode(HSB, 360, 100, 100);  // HSB specifies the color model, and the three values specify their range
+  colorMode(); //allows users to change the way color value is interpreted
   rectMode(CENTER);
   noStroke();
-*/
+}
 
 function interactiveColorBoxes() {
   // y-value divided by 2 to get values form 0 to 360 on the color wheel

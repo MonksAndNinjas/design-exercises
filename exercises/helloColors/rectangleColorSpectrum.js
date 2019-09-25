@@ -2,12 +2,13 @@
 global variables:
   var stepX;
   var stepY;
+*/
 
-setup() parameters:
+function rectangleColorSpectrumSetup() {
   createCanvas(800, 400);
   noStroke();
-  colorMode(HSB, width, height, 100); Hue is not defined between 0 and 360, but 0 and 800
-*/
+  colorMode(HSB, width, height, 100); // Hue is not defined between 0 and 360, but 0 and 800
+}
 
 function rectangleColorSpectrum() {
 

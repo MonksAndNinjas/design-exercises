@@ -20,6 +20,7 @@ function blackhole() {
   }
 }
 
+/////////////////////////////////////////////////////////////////////////////////////
 
 function polygonsSetup() {
   createCanvas(720, 720);
@@ -49,6 +50,8 @@ function polygons() {
     pop();
   }
 }
+
+///////////////////////////////////////////////////////////////////////
 
 function colorPolygonsSetup() {
   createCanvas(720, 720);
