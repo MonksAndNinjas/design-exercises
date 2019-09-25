@@ -12,30 +12,40 @@ console.log(
   //"overlappingColorPalete() => creates slightly transparent and overlapping color palette"
   //"halfDrawnColorPalette() => just like overlappingColorPalete() except half of tiles are drawn"
   //"shapes() => create exotic shapes"
-  "gridAligntment() => diagonal with only two possible directions used to create complex structure"
+  //"gridAligntment() => diagonal with only two possible directions used to create complex structure"
+  //"colorGridAlignment() => adds color and transparency to gridAlignment()"
+  "numberGridAlignment() => changes number, color, and strokeWeight of diagonal lines"
 );
 
 //global variables
-var tileCount = 20;  // value defies the grid resolution
-var actRandomSeed = 0;
+var tileCount = 10;
 
-var actStrokeCap;
+var tileWidth;
+var tileHeight;
+var shapeSize = 50;
+var newShapeSize = shapeSize;
+var shapeAngle = 0;
+var maxDist;
+var currentShape;
+var shapes;
+
+var sizeMode = 0;
 
 function preload() {
+  mouseGridAlignmentPreLoad();
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  gridAlignmentSetup();
+  mouseGridAlignmentSetup();
 }
 
 // repeats draw function
 function draw() {
-  gridAlignment();
+  mouseGridAlignment();
 }
 
 function mousePressed() {
-  gridAlignmentMousePressed();
 }
 
 function mouseReleased() {
@@ -50,5 +60,5 @@ function keyPressed() {
 function keyReleased() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 
-  gridAlignmentKeyReleased();
+  mouseGridAlignmentKeyReleased();
 }

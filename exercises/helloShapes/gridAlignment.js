@@ -46,6 +46,7 @@ function gridAlignmentMousePressed() {
 }
 
 function gridAlignmentKeyReleased() {
+  // defines the  look of the line endings
   if (key == '1') actStrokeCap = ROUND;
   if (key == '2') actStrokeCap = SQUARE;
   if (key == '3') actStrokeCap = PROJECT;
