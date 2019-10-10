@@ -14,35 +14,21 @@ console.log(
   //"shapes() => create exotic shapes"
   //"gridAligntment() => diagonal with only two possible directions used to create complex structure"
   //"colorGridAlignment() => adds color and transparency to gridAlignment()"
-  "numberGridAlignment() => changes number, color, and strokeWeight of diagonal lines"
+  //"numberGridAlignment() => changes number, color, and strokeWeight of diagonal lines"
+  //"movementInGrid() => creates circles that are randomly added to create tension and movement"
 );
 
 //global variables
-var tileCount = 10;
-
-var tileWidth;
-var tileHeight;
-var shapeSize = 50;
-var newShapeSize = shapeSize;
-var shapeAngle = 0;
-var maxDist;
-var currentShape;
-var shapes;
-
-var sizeMode = 0;
 
 function preload() {
-  mouseGridAlignmentPreLoad();
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  mouseGridAlignmentSetup();
 }
 
 // repeats draw function
 function draw() {
-  mouseGridAlignment();
 }
 
 function mousePressed() {
@@ -59,6 +45,4 @@ function keyPressed() {
 
 function keyReleased() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
-
-  mouseGridAlignmentKeyReleased();
 }
