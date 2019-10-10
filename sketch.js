@@ -16,6 +16,7 @@ console.log(
   //"colorGridAlignment() => adds color and transparency to gridAlignment()"
   //"numberGridAlignment() => changes number, color, and strokeWeight of diagonal lines"
   //"movementInGrid() => creates circles that are randomly added to create tension and movement"
+  //"shiftingBlackCircles() => circles are situated behind a dense grid of white circles"
 );
 
 //global variables
