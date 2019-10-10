@@ -17,19 +17,27 @@ console.log(
   //"numberGridAlignment() => changes number, color, and strokeWeight of diagonal lines"
   //"movementInGrid() => creates circles that are randomly added to create tension and movement"
   //"shiftingBlackCircles() => circles are situated behind a dense grid of white circles"
+  //"colorTransparentCircles() => color variations and transparent circles"
+  "cornerShifted() => Only the corners of the elements are shited here, not the elements themselves"
 );
 
 //global variables
+var tileCount = 20;
+var actRandomSeed = 0;
+
+var rectSize = 30;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
+  cornerShiftedSetup();
 }
 
 // repeats draw function
 function draw() {
+  cornerShifted();
 }
 
 function mousePressed() {
