@@ -19,22 +19,39 @@ console.log(
   //"shiftingBlackCircles() => circles are situated behind a dense grid of white circles"
   //"colorTransparentCircles() => color variations and transparent circles"
   //"cornerShifted() => Only the corners of the elements are shited here, not the elements themselves"
+  "modulesInGrid() => nesting of several forms into a complex module"
 );
 
 //global variables
+var count = 0;
+var tileCountX = 10;
+var tileCountY = 10;
+var tileWidth = 0;
+var tileHeight = 0;
+
+var colorStep = 15;
+
+var circleCount = 0;
+var endSize = 0;
+var endOffset = 0;
+
+var actRandomSeed = 0;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
+  modulesInGridSetup();
 }
 
 // repeats draw function
 function draw() {
+  modulesInGrid();
 }
 
 function mousePressed() {
+  modulesInGridMousePressed();
 }
 
 function mouseReleased() {
