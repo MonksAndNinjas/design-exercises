@@ -22,34 +22,28 @@ console.log(
   //"modulesInGrid() => nesting of several forms into a complex module"
   //"checkBoxes() => working with visual design elements"
   //"innerText() => working with innerText element"
-  "sliders() => creates shape using sliders"
+  //"sliders() => creates shape using sliders"
+  "sliders2() => another sliders image"
 );
 
 //global variables
-var w = 600;
-var h = 600;
-var sliderCount;
-var sliderWidth;
-var sliderHeight = 17;
-var padding = 10;
-
-var sliderMin = 0;
-var sliderMax = 100;
+var sliders;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  slidersSetup();
+  sliders2Setup();
 }
 
 // repeats draw function
 function draw() {
-  sliders();
+  sliders2();
 }
 
 function mousePressed() {
+  sliders2MousePressed();
 }
 
 function mouseReleased() {
