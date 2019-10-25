@@ -21,29 +21,32 @@ console.log(
   //"cornerShifted() => Only the corners of the elements are shited here, not the elements themselves"
   //"modulesInGrid() => nesting of several forms into a complex module"
   //"checkBoxes() => working with visual design elements"
-  "innerText() => working with innerText element"
+  //"innerText() => working with innerText element"
+  "sliders() => creates shape using sliders"
 );
 
 //global variables
-var video;
-var slider;
-var cols = 40;
-var rows = 40;
-var boxes;
-var boxHolder;
+var w = 600;
+var h = 600;
+var sliderCount;
+var sliderWidth;
+var sliderHeight = 17;
+var padding = 10;
+
+var sliderMin = 0;
+var sliderMax = 100;
 
 function preload() {
-  innerTextPreload();
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  innerTextSetup();
+  slidersSetup();
 }
 
 // repeats draw function
 function draw() {
-  innerText();
+  sliders();
 }
 
 function mousePressed() {
