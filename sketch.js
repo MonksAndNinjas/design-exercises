@@ -19,39 +19,36 @@ console.log(
   //"shiftingBlackCircles() => circles are situated behind a dense grid of white circles"
   //"colorTransparentCircles() => color variations and transparent circles"
   //"cornerShifted() => Only the corners of the elements are shited here, not the elements themselves"
-  "modulesInGrid() => nesting of several forms into a complex module"
+  //"modulesInGrid() => nesting of several forms into a complex module"
+  "checkBoxes() => working with visual design elements"
 );
 
 //global variables
-var count = 0;
-var tileCountX = 10;
-var tileCountY = 10;
-var tileWidth = 0;
-var tileHeight = 0;
-
-var colorStep = 15;
-
-var circleCount = 0;
-var endSize = 0;
-var endOffset = 0;
-
-var actRandomSeed = 0;
+var img;
+var img1;
+var img2;
+var img3;
+var slider;
+var cols = 40;
+var rows = 40;
+var boxes;
+var boxHolder;
 
 function preload() {
+  checkBoxesPreload();
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  modulesInGridSetup();
+  checkBoxesSetup();
 }
 
 // repeats draw function
 function draw() {
-  modulesInGrid();
+  checkBoxesDraw();
 }
 
 function mousePressed() {
-  modulesInGridMousePressed();
 }
 
 function mouseReleased() {
@@ -61,6 +58,7 @@ function keyPressed() {
   // if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
   // if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
   // if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
+  checkBoxesKeyPressed();
 }
 
 function keyReleased() {
