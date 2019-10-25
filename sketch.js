@@ -23,27 +23,27 @@ console.log(
   //"checkBoxes() => working with visual design elements"
   //"innerText() => working with innerText element"
   //"sliders() => creates shape using sliders"
-  "sliders2() => another sliders image"
+  //"sliders2() => another sliders image"
+  "moire() => unexpected optical illusions"
 );
 
 //global variables
-var sliders;
+var drawMode = 1;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  sliders2Setup();
+  moireSetup();
 }
 
 // repeats draw function
 function draw() {
-  sliders2();
+  moire();
 }
 
 function mousePressed() {
-  sliders2MousePressed();
 }
 
 function mouseReleased() {
@@ -53,6 +53,7 @@ function keyPressed() {
   // if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
   // if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
   // if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
+  moireKeyPressed();
 }
 
 function keyReleased() {
