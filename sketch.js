@@ -20,14 +20,12 @@ console.log(
   //"colorTransparentCircles() => color variations and transparent circles"
   //"cornerShifted() => Only the corners of the elements are shited here, not the elements themselves"
   //"modulesInGrid() => nesting of several forms into a complex module"
-  "checkBoxes() => working with visual design elements"
+  //"checkBoxes() => working with visual design elements"
+  "innerText() => working with innerText element"
 );
 
 //global variables
-var img;
-var img1;
-var img2;
-var img3;
+var video;
 var slider;
 var cols = 40;
 var rows = 40;
@@ -35,17 +33,17 @@ var boxes;
 var boxHolder;
 
 function preload() {
-  checkBoxesPreload();
+  innerTextPreload();
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  checkBoxesSetup();
+  innerTextSetup();
 }
 
 // repeats draw function
 function draw() {
-  checkBoxesDraw();
+  innerText();
 }
 
 function mousePressed() {
@@ -58,7 +56,6 @@ function keyPressed() {
   // if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
   // if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
   // if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
-  checkBoxesKeyPressed();
 }
 
 function keyReleased() {
