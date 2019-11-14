@@ -27,46 +27,53 @@ console.log(
   //"moire() => unexpected optical illusions"
   //"moireTwo() => another unexpected optical illusion"
   //"moireThree() => optical illusion three"
-  "moireFour() => another illusion"
+  //"moireFour() => another illusion"
+  "dAgent() => using dumb agent patterns"
 );
 
 //global variables
-var shapes = [];
-var density = 2.5;
-var shapeHeight = 64;
-var shapeColor;
-var smoothness = 0;
+var NORTH = 0;
+var NORTHEAST = 1;
+var EAST = 2;
+var SOUTHEAST = 3;
+var SOUTH = 4;
+var SOUTHWEST = 5;
+var WEST = 6;
+var NORTHWEST = 7;
+var direction;
 
-var newShape;
+var stepSize = 1;
+var diameter = 1;
+
+var posX;
+var posY;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  moireFourSetup();
+  dAgentSetup();
 }
 
 // repeats draw function
 function draw() {
-  moireFour();
+  dAgent();
 }
 
 function mousePressed() {
-  moireFourMousePressed();
 }
 
 function mouseReleased() {
-  moireFourMouseReleased();
 }
 
 function keyPressed() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
   // if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
   // if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
-  moireFourKeyPressed();
 }
 
 function keyReleased() {
+  dAgentKeyReleased();
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 }
