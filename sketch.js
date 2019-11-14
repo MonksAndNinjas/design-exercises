@@ -26,7 +26,8 @@ console.log(
   //"sliders2() => another sliders image"
   //"moire() => unexpected optical illusions"
   //"moireTwo() => another unexpected optical illusion"
-  "moireThree() => optical illusion three"
+  //"moireThree() => optical illusion three"
+  "moireFour() => another illusion"
 );
 
 //global variables
@@ -34,6 +35,7 @@ var shapes = [];
 var density = 2.5;
 var shapeHeight = 64;
 var shapeColor;
+var smoothness = 0;
 
 var newShape;
 
@@ -42,27 +44,27 @@ function preload() {
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  moireThreeSetup();
+  moireFourSetup();
 }
 
 // repeats draw function
 function draw() {
-  moireThree();
+  moireFour();
 }
 
 function mousePressed() {
-  moireThreeMousePressed();
+  moireFourMousePressed();
 }
 
 function mouseReleased() {
-  moireThreeMouseReleased();
+  moireFourMouseReleased();
 }
 
 function keyPressed() {
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
   // if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
   // if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
-  moireThreeKeyPressed();
+  moireFourKeyPressed();
 }
 
 function keyReleased() {
