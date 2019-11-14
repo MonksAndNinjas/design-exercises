@@ -24,36 +24,40 @@ console.log(
   //"innerText() => working with innerText element"
   //"sliders() => creates shape using sliders"
   //"sliders2() => another sliders image"
-  "moire() => unexpected optical illusions"
+  //"moire() => unexpected optical illusions"
+  "moireTwo() => another unexpected optical illusion"
 );
 
 //global variables
-var drawMode = 1;
+var shapes = [];
+var minRadius = 5;
+var maxRadius = 250;
+var density = 5;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  moireSetup();
+  moireTwoSetup();
 }
 
 // repeats draw function
 function draw() {
-  moire();
+  moireTwo();
 }
 
 function mousePressed() {
 }
 
 function mouseReleased() {
+  moireTwoMouseReleased();
 }
 
 function keyPressed() {
-  // if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
+  if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
   // if (key == 'c' || key == 'C') writeFile([gd.ase.enode(colors)], gd.timestamp(), 'ase'); // to save a Adobe Swatch Exchange
   // if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
-  moireKeyPressed();
 }
 
 function keyReleased() {
