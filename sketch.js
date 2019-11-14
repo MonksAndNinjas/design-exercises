@@ -28,7 +28,8 @@ console.log(
   //"moireTwo() => another unexpected optical illusion"
   //"moireThree() => optical illusion three"
   //"moireFour() => another illusion"
-  "dAgent() => using dumb agent patterns"
+  //"dAgent() => using dumb agent patterns"
+  "iAgent() => intelligent agent patterns"
 );
 
 //global variables
@@ -40,6 +41,7 @@ var SOUTH = 4;
 var SOUTHWEST = 5;
 var WEST = 6;
 var NORTHWEST = 7;
+
 var direction;
 
 var stepSize = 1;
@@ -48,17 +50,20 @@ var diameter = 1;
 var posX;
 var posY;
 
+var drawMode = 1;
+var counter = 0;
+
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  dAgentSetup();
+  iAgentSetup();
 }
 
 // repeats draw function
 function draw() {
-  dAgent();
+  iAgent();
 }
 
 function mousePressed() {
@@ -74,6 +79,6 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  dAgentKeyReleased();
+  iAgentKeyReleased();
   if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 }
