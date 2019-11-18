@@ -31,38 +31,31 @@ console.log(
   //"dAgent() => using dumb agent patterns"
   //"iAgent() => intelligent agent patterns"
   //"sAgent() => Shapes from agents"
-  "sAgentsTwo() => another shape using agents"
+  //"sAgentsTwo() => another shape using agents"
+  "gAgents() => growth structure from agents"
 );
 
 //global variables
-var formResolution = 15;
-var stepSize = 2;
-var distortionFactor = 1;
-var initRadius = 150;
-var centerX;
-var centerY;
+var maxCount = 5000; // max count of the cirlces
+var currentCount = 1;
 var x = [];
 var y = [];
-
-var filled = false;
-var freeze = false;
-var drawMode = 1;
+var r = [];
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  sAgentTwoSetup();
+  gAgentSetup();
 }
 
 // repeats draw function
 function draw() {
-  sAgentTwo();
+  gAgent();
 }
 
 function mousePressed() {
-  sAgentTwoMousePressed();
 }
 
 function mouseReleased() {
@@ -75,6 +68,5 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  sAgentTwoKeyReleased();
   //if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 }
