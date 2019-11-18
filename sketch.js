@@ -41,18 +41,22 @@ var currentCount = 1;
 var x = [];
 var y = [];
 var r = [];
+var x2 = [];
+var y2 = [];
+
+var drawGhosts = false;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  gAgentSetup();
+  gAgentTwoSetup();
 }
 
 // repeats draw function
 function draw() {
-  gAgent();
+  gAgentTwo();
 }
 
 function mousePressed() {
@@ -68,5 +72,6 @@ function keyPressed() {
 }
 
 function keyReleased() {
+  gAgentTwoKeyReleased();
   //if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 }
