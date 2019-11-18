@@ -29,44 +29,38 @@ console.log(
   //"moireThree() => optical illusion three"
   //"moireFour() => another illusion"
   //"dAgent() => using dumb agent patterns"
-  "iAgent() => intelligent agent patterns"
+  //"iAgent() => intelligent agent patterns"
+  "sAgent() => Shapes from agents"
 );
 
 //global variables
-var NORTH = 0;
-var NORTHEAST = 1;
-var EAST = 2;
-var SOUTHEAST = 3;
-var SOUTH = 4;
-var SOUTHWEST = 5;
-var WEST = 6;
-var NORTHWEST = 7;
+var formResolution = 15;
+var stepSize = 2;
+var distortionFactor = 1;
+var initRadius = 150;
+var centerX;
+var centerY;
+var x = [];
+var y = [];
 
-var direction;
-
-var stepSize = 1;
-var diameter = 1;
-
-var posX;
-var posY;
-
-var drawMode = 1;
-var counter = 0;
+var filled = false;
+var freeze = false;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  iAgentSetup();
+  sAgentSetup();
 }
 
 // repeats draw function
 function draw() {
-  iAgent();
+  sAgent();
 }
 
 function mousePressed() {
+  sAgentMousePressed();
 }
 
 function mouseReleased() {
@@ -79,6 +73,6 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  iAgentKeyReleased();
-  if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
+  sAgentKeyReleased();
+  //if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 }
