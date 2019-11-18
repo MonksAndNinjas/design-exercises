@@ -30,7 +30,8 @@ console.log(
   //"moireFour() => another illusion"
   //"dAgent() => using dumb agent patterns"
   //"iAgent() => intelligent agent patterns"
-  "sAgent() => Shapes from agents"
+  //"sAgent() => Shapes from agents"
+  "sAgentsTwo() => another shape using agents"
 );
 
 //global variables
@@ -45,22 +46,23 @@ var y = [];
 
 var filled = false;
 var freeze = false;
+var drawMode = 1;
 
 function preload() {
 }
 
 // variables to add to the canvas before drawing begins
 function setup() {
-  sAgentSetup();
+  sAgentTwoSetup();
 }
 
 // repeats draw function
 function draw() {
-  sAgent();
+  sAgentTwo();
 }
 
 function mousePressed() {
-  sAgentMousePressed();
+  sAgentTwoMousePressed();
 }
 
 function mouseReleased() {
@@ -73,6 +75,6 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  sAgentKeyReleased();
+  sAgentTwoKeyReleased();
   //if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png'); // saves image
 }
